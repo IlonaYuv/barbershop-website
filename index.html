@@ -7,36 +7,38 @@
     <title>BarberShop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;700&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header class="header">
+
         <!--Navbar-->
         <nav class="navbar">
             <img src="./images/logo.png" alt="Название компании" 
             width="68.93px" height="55.46px" class="logo">
-            <ul class="nav-links">
-                <li><a href="#about-section" class="nav-link">О нас</a></li>
-                <li><a href="#price-section" class="nav-link">Услуги и цены</a></li>
-                <li><a href="#" class="nav-link">Мастера</a></li>
-                <li><a href="#" class="nav-link">Контакты</a></li>
+            <ul class="nav-links list">
+                <li class="item"><a href="#about-section" class="nav-link">О нас</a></li>
+                <li class="item"><a href="#price-section" class="nav-link">Услуги и цены</a></li>
+                <li class="item"><a href="#" class="nav-link">Мастера</a></li>
+                <li class="item"><a href="#" class="nav-link">Контакты</a></li>
             </ul>
-            <div>
-                <a href="tel:"+380441111111" class="phone-link">+38 044 111 11 11</a>
-                <a href="#footer" class="primary-btn">Онлайн запись</a>
-            </div>
+            <ul class="contacts-links list">
+                <li class="item"><a href="tel:"+380441111111" class="phone-link">+38 044 111 11 11</a></li>
+                <li class="item"><a href="#footer" class="primary-btn">Онлайн запись</a></li>
+            </ul>
         </nav>
 
+        <!--Sidebar-->
         <aside class="sidebar">
-            <div class="social-box">
-                <a href="#" class="social-link">Instagram</a> 
-                <a href="#" class="social-link">YouTube</a>
-            </div>
+            <ul class="social-box list">
+                <li class="item"><a href="#" class="social-link">Instagram</a></li>
+                <li class="item"><a href="#" class="social-link">YouTube</a></li>
+            </ul>
         </aside>
+
+        <!--Slider-->
         <div class="slider">
             <div class="slide">
                 <span class="suptitle-secondary">A hair salon for men in Kyiv</span>
@@ -58,8 +60,9 @@
             </div>
         </div>
     </header>
-
+    
     <main class="layout">
+        <!--About-->
         <section id="about-section" class="about-section">
             <div class="about-image">
                 <img src="./images/about1.jpg" alt="Намазывавают шею пеной" width="270px" height="445px">
@@ -76,12 +79,12 @@
                 <a href="#footer" class="primary-btn dark">Онлайн запись</a>
             </div>
         </section>
-
+        <!--Price-->
         <section class="section-box" id="price-section" >
                <span class="suptitle-secondary">Проведи время в компании лучших мастеров</span>
                <h2 class="section-title light">Услуги и цены</h2>
                <div class="price-box">
-                   <ul class="price-list">
+                   <ul class="price-list list">
                        <li class="price-item">
                            <p>Мужская стрижка</p>
                            <span>от 300 грн.</span>
@@ -99,7 +102,7 @@
                            <span>от 200 грн.</span>
                        </li>
                    </ul>
-                   <ul class="price-list">
+                   <ul class="price-list list">
                        <li class="price-item">
                            <p>Cтрижка у стажера</p>
                            <span>от 50 грн.</span>
@@ -120,7 +123,7 @@
                </div>
                 <a href="#footer" class="primary-btn">Онлайн запись</a>
         </section>
-
+        <!--Why section-->
         <section id="why-section" class="section-box">
             <div class="number-container">
                 <div class="number-box">
@@ -146,11 +149,11 @@
                 <h3 class="section-subtitle">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</h3>
             </div>
         </section>
-
+        <!--Masters section-->
         <section id="masters-section" class="section-box">
             <span class="suptitle-primary">для настоящих ценителей атмосферы</span>
             <h2 class="section-title">Наши мастера</h2>
-            <ul class="masrers-list">
+            <ul class="masrers-list list">
                 <li class="master-card">
                     <img src="./images/master1.jpg" alt="Мастер John за работой" width="370px" height="346px">
                     <p>John Smith</p>
@@ -171,7 +174,7 @@
                 </li>
             </ul>
         </section>
-
+        <!--Gallery-->
         <section class="section-box">
             <span class="suptitle-primary">На латинском языке “барба” означает “борода”</span>
             <div class="image-gallery">
@@ -183,7 +186,7 @@
         </section>
         
     </main>
-
+    <!--Footer-->
     <footer class="footer" id="footer">
         <div>
            <h2 class="section-title light">Онлайн-запись</h2>
@@ -191,12 +194,12 @@
                <input type="submit" class="primary-btn">
            </form>
         </div>
-        <div>
+        <div class="footer-contacts">
             <h2 class="section-title light">Контакты</h2>
-                <ul class="contacts-box">
-                    <li><address>ул. Васильковая, 7А <br> Киев, 08132</address></li>
-                    <li><a href="tel:+380441111111">+38 044 111 11 11</a></li>
-                    <li><a href="mailto:barbershop@email.com">barbershop@email.com</a></li>
+                <ul class="contacts-box list">
+                    <li><address class="footer-adress">ул. Васильковая, 7А <br> Киев, 08132</address></li>
+                    <li><a href="tel:+380441111111" class="phone">+38 044 111 11 11</a></li>
+                    <li><a href="mailto:barbershop@email.com" class="mail">barbershop@email.com</a></li>
                 </ul>
                 <div class="schedule-box">
                     <span class="suptitle-secondary">Время работы</span>
