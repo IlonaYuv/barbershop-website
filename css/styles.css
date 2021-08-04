@@ -62,9 +62,9 @@ body {
 }
 
 .logo {
-  margin: 0 32px;
   width: 69px;
   height: 56px;
+  fill: var(--text-primary);
 }
 
 .nav-links {
@@ -128,7 +128,11 @@ body {
 /* Slider */
 .slider {
   width: calc(100% - 155px);
-  background-image: url(../images/slider.jpg);
+  background-image: linear-gradient(310deg, rgba(0 0 0 / 21%), #000000d4),
+    url(../images/slider.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .suptitle-secondary,
@@ -237,19 +241,43 @@ body {
   color: var(--text-primary);
 }
 
-/* price */
+/* Price */
+.price {
+  background-image: url(../images/price.png);
+  background-color: rgba(17, 19, 25, 1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .section-title.light {
-  background-color: aquamarine;
   color: var(--white-color);
+}
+
+.price-box {
+  display: flex;
 }
 
 .price-list {
   display: flex;
+  width: 49%;
+  flex-wrap: wrap;
 }
+
+.price-list:nth-child(odd) {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-list:nth-child(even) {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
 .price-item {
   display: flex;
-  justify-content: space-between;
   width: 100%;
+  padding: 0 40px;
+  justify-content: space-between;
+  align-items: center;
 
   color: var(--text-secondary);
   font-weight: 400;
@@ -294,6 +322,10 @@ body {
 }
 
 /* Masters section */
+.masters {
+  background-color: #f7f7f7;
+}
+
 .masters-list {
   display: flex;
   justify-content: space-between;
@@ -315,6 +347,33 @@ body {
   color: var(--primary-color);
   font-size: 14px;
   line-height: 1.36;
+}
+
+.master-social-box {
+  display: flex;
+  width: 100%;
+  padding: 0 90px;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+.master-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+}
+.master-social-link svg {
+  height: 20px;
+  fill: var(--text-primary);
+}
+
+.master-social-link:hover svg,
+.master-social-link:focus svg {
+  fill: var(--primary-color);
 }
 
 /* Footer */
