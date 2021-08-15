@@ -5,6 +5,7 @@
   --text-primary: #303030;
   --text-secondary: #9da4bd;
   --text-primary-light: #555555;
+  --text-form: rgba(157, 164, 189, 0.4);
 }
 
 body {
@@ -75,7 +76,7 @@ body {
   height: 56px;
   fill: var(--text-primary);
   animation: infiniteRotate;
-  animation-duration: 0.5s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
 }
 
@@ -126,6 +127,7 @@ body {
   padding: 12px 20px;
 
   color: var(--white-color);
+  background-color: transparent;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -135,6 +137,7 @@ body {
   border: 1px solid var(--primary-color);
   box-sizing: border-box;
   border-radius: 25px;
+  cursor: pointer;
 }
 
 /* Slider */
@@ -370,14 +373,49 @@ body {
 }
 
 .master-social-link {
+  position: relative;
+  overflow: hidden;
+
   display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
+
   background-color: var(--white-color);
   border-radius: 50%;
 }
+
+.master-social-link::before,
+.master-social-link::after {
+  content: "";
+  position: absolute;
+
+  width: 24px;
+  height: 24px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform, 250ms linear;
+}
+
+.master-social-link.inst::before,
+.master-social-link.inst::after {
+  background-image: url(../images/instagram.svg);
+}
+
+.master-social-link::after {
+  transform: translateY(50px);
+}
+
+.master-social-link:hover::before {
+  transform: translateY(-50px);
+}
+
+.master-social-link:hover::after {
+  transform: translateY(0px);
+}
+
 .master-social-link svg {
   height: 20px;
   fill: var(--text-primary);
@@ -408,7 +446,7 @@ body {
 
   background-color: rgb(0 0 0 / 75%);
   color: var(--white-color);
-  transition: transform 0.3s linear;
+  transition: transform, 250ms linear;
 }
 
 .gallery-card:hover .gallery-description {
@@ -435,6 +473,62 @@ body {
 .footer-contacts {
   width: 50%;
   height: inherit;
+}
+
+.footer-form .form-field {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--text-form);
+  outline: none;
+}
+
+.footer-form .field-label {
+  position: relative;
+
+  display: inline-block;
+}
+
+.footer-form .field-label legend {
+  position: absolute;
+  top: -3px;
+
+  color: var(--text-form);
+  font-weight: 600;
+  /* font-size: 11px; */
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: translate, 250ms linear;
+}
+
+.footer-form .form-field:focus + legend {
+  color: var(--white-color);
+
+  transform: translate(-2px, -24px);
+}
+
+.field-label:hover .form-field,
+.footer-form .form-field:focus {
+  border-color: var(--white-color);
+}
+
+.field-label:hover legend {
+  color: var(--white-color);
+}
+
+textarea.form-field {
+  display: block;
+  width: 100%;
+  resize: none;
+}
+
+textarea.form-field::placeholder {
+  color: var(--text-form);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .footer-contacts {
