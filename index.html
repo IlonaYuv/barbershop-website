@@ -165,11 +165,7 @@
                     <p>John Smith</p>
                     <span>Extreme Barber</span>
                     <div class="master-social-box">
-                        <a href="" class="master-social-link">
-                            <svg>
-                                <use href="./images/sprite.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
+                        <a href="" class="master-social-link inst"></a>
                         <a href="" class="master-social-link">
                             <svg>
                                 <use href="./images/sprite.svg#icon-twitter"></use>
@@ -192,11 +188,7 @@
                     <p>Michele Doe</p>
                     <span>Extreme Barber</span>
                     <div class="master-social-box">
-                        <a href="" class="master-social-link">
-                            <svg>
-                                <use href="./images/sprite.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
+                        <a href="" class="master-social-link inst"></a>
                         <a href="" class="master-social-link">
                             <svg>
                                 <use href="./images/sprite.svg#icon-twitter"></use>
@@ -219,11 +211,7 @@
                     <p>Alan Black</p>
                     <span>Extreme Barber</span>
                     <div class="master-social-box">
-                        <a href="" class="master-social-link">
-                            <svg>
-                                <use href="./images/sprite.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
+                        <a href="" class="master-social-link inst"></a>
                         <a href="" class="master-social-link">
                             <svg>
                                 <use href="./images/sprite.svg#icon-twitter"></use>
@@ -273,8 +261,17 @@
     <footer class="footer" id="footer">
         <div class="footer-form">
            <h2 class="section-title light">Онлайн-запись</h2>
-           <form action="">
-               <input type="submit" class="primary-btn">
+           <form action="#">
+               <label for="username" class="field-label">
+                   <input type="text" name="username" id="username" class="form-field" required>
+                   <legend>Имя*</legend>
+               </label>
+               <label for="userphone" class="field-label">
+                    <input type="tel" name="userphone" id="userphone" class="form-field" required>
+                    <legend>Телефон*</legend>
+               </label>
+               <textarea name="usermessage" class="form-field" cols="30" rows="10" placeholder="Сообщение"></textarea>
+               <button type="submit" class="primary-btn">Отправить</button> 
            </form>
         </div>
         <div class="footer-contacts">
