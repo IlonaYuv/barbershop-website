@@ -271,8 +271,12 @@ body {
 
 .price-box {
   display: flex;
+  margin-bottom: 50px;
 }
-
+.price-btn {
+  display: flex;
+  justify-content: center;
+}
 .price-list {
   display: flex;
   width: 49%;
@@ -430,11 +434,17 @@ body {
 .image-gallery {
   display: flex;
   justify-content: space-between;
+  margin-top: 44px;
 }
 
 .gallery-card {
   position: relative;
   overflow: hidden;
+  width: 20%;
+}
+
+.gallery-card img {
+  width: 100%;
 }
 
 .gallery-description {
@@ -469,14 +479,33 @@ body {
   background-position: right top;
 }
 
+.footer-form {
+  padding-top: 130px;
+}
+
 .footer-form,
 .footer-contacts {
   width: 50%;
   height: inherit;
+  padding-right: 50px;
+}
+
+.footer-form-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer-form .form-field {
+  margin-bottom: 44px;
+  width: 100%;
+
+  color: var(--white-color);
   background-color: transparent;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
   border: none;
   border-bottom: 1px solid var(--text-form);
   outline: none;
@@ -484,8 +513,9 @@ body {
 
 .footer-form .field-label {
   position: relative;
-
   display: inline-block;
+  width: calc(50% - 15px);
+  margin-right: 15px;
 }
 
 .footer-form .field-label legend {
@@ -494,7 +524,7 @@ body {
 
   color: var(--text-form);
   font-weight: 600;
-  /* font-size: 11px; */
+  font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -520,6 +550,12 @@ textarea.form-field {
   display: block;
   width: 100%;
   resize: none;
+
+  color: var(--white-color);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
 }
 
 textarea.form-field::placeholder {
@@ -551,6 +587,10 @@ textarea.form-field::placeholder {
   position: relative;
 
   font-style: normal;
+}
+
+.contacts-box .footer-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .phone,
@@ -587,6 +627,10 @@ textarea.form-field::placeholder {
 
 .mail::before {
   background-image: url(../images/mail.svg);
+}
+
+.schedule-box {
+  margin-top: 70px;
 }
 
 /* Copyright */
