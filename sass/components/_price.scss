@@ -1,0 +1,47 @@
+.price {
+  background-image: url(../images/price.png);
+  background-color: rgba(17, 19, 25, 1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.section-title.light {
+  color: $main-color;
+}
+
+.price-box {
+  display: flex;
+  margin-bottom: 50px;
+}
+.price-btn {
+  display: flex;
+  justify-content: center;
+}
+.price-list {
+  display: flex;
+  width: 49%;
+  flex-wrap: wrap;
+}
+
+.price-list:nth-child(odd) {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-list:nth-child(even) {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.price-item {
+  display: flex;
+  width: 100%;
+  padding: 0 40px;
+  justify-content: space-between;
+  align-items: center;
+
+  color: $text-secondary;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
