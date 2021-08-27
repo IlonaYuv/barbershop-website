@@ -1,0 +1,5 @@
+@mixin customBg($bg-size: cover, $bg-repeat: no-repeat, $bg-att: fixed) {
+  background-size: $bg-size;
+  background-repeat: $bg-repeat;
+  background-attachment: $bg-att;
+}
