@@ -3,9 +3,12 @@
 }
 
 .masters-list {
-  display: flex;
-  justify-content: space-between;
-  flex-basis: 300px;
+  @include respond-to(desktop) {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 300px;
+    text-align: center;
+  }
 }
 .masters-list p,
 .masters-list span {
